@@ -1,0 +1,122 @@
+{
+  "torch": "2.14.1+cu130",
+  "screen_flagged": 7,
+  "screen_true_errors": 7,
+  "screen_recall": 1.0,
+  "screen_precision": 1.0,
+  "ann_train_s": 25.4,
+  "ann_rmse": 1.6409733173423053,
+  "gbm_rmse": 2.0920185365161337,
+  "ridge_rmse": 4.7407853572558905,
+  "ann_r2": 0.9509023795326694,
+  "ann_noise_floor_rmse": 1.492923185708703,
+  "ann_beats_gbm": 1.0,
+  "ann_beats_ridge": 1.0,
+  "ann_coverage90": 0.9263392857142857,
+  "ann_oos_recall": 1.0,
+  "ann_oos_precision": 0.7380952380952381,
+  "ann_ood_rmse": 3.372318663827932,
+  "gbm_ood_rmse": 15.281224611387845,
+  "ann_ood_beats_gbm": 1.0,
+  "ann_ood_uncertainty_ratio": 4.38694429397583,
+  "ann_ood_auroc": 0.9869732142857143,
+  "ann_ood_coverage90": 0.708,
+  "ann_section_s": 32.8,
+  "rnn_results": {
+    "lstm": {
+      "rmse_last": 11.028779029846191,
+      "nasa": 188.9397430419922,
+      "train_s": 76.4
+    },
+    "gru": {
+      "rmse_last": 11.698348999023438,
+      "nasa": 224.9871368408203,
+      "train_s": 86.3
+    },
+    "lstm_no_recipe_norm": {
+      "rmse_last": 11.477961540222168,
+      "nasa": 234.5238037109375,
+      "train_s": 75.9
+    },
+    "gbm_window_stats": {
+      "rmse_last": 12.4144313040351,
+      "nasa": 262.66668533338213
+    }
+  },
+  "rnn_rmse_last": 11.028779029846191,
+  "rnn_nasa": 188.9397430419922,
+  "rnn_beats_gbm_nasa": 1.0,
+  "rnn_recipe_norm_helps": 1.0,
+  "rnn_warning_threshold": 23.0,
+  "rnn_warning_recall": 0.7616279069767442,
+  "rnn_warning_precision": 0.6822916666666666,
+  "rnn_warning_alarms": 192,
+  "gbm_warning": {
+    "precision": 0.968503937007874,
+    "recall": 0.7151162790697675,
+    "alarms": 127,
+    "true_events": 172
+  },
+  "rnn_section_s": 245.5,
+  "cnn_train_s": 272.0,
+  "cnn_accuracy": 0.9846666666666667,
+  "cnn_macro_f1": 0.9699379812698993,
+  "cnn_per_class_f1": {
+    "good": 0.9924,
+    "chipped": 1.0,
+    "cracked": 0.9205,
+    "spot": 0.956,
+    "mottled": 0.9808
+  },
+  "cnn_escape_rate": 0.008363201911589008,
+  "cnn_false_reject": 0.056865464632454926,
+  "cnn_ece_uncalibrated": 0.01811495853463811,
+  "cnn_ece": 0.00423750092585879,
+  "cnn_temperature": 0.6602669358253479,
+  "cnn_tau_good": 0.976,
+  "cnn_params": 41033,
+  "cnn_shift_accuracy": {
+    "with_photometric_aug": 0.9285,
+    "without": 0.0635
+  },
+  "cnn_plain_in_domain_accuracy": 0.974,
+  "cnn_aug_shift_gain": 0.865,
+  "cnn_line2_before_adapt": {
+    "escape": 0.023131672597864767,
+    "false_reject": 0.3184979137691238
+  },
+  "cnn_drift_line1": {
+    "z": {
+      "brightness": -0.6,
+      "contrast": -2.3,
+      "sharpness": -2.0
+    },
+    "alarm": false,
+    "signals": []
+  },
+  "cnn_drift_line2": {
+    "z": {
+      "brightness": -44.6,
+      "contrast": -120.8,
+      "sharpness": -14.1
+    },
+    "alarm": true,
+    "signals": [
+      "brightness",
+      "contrast",
+      "sharpness"
+    ]
+  },
+  "cnn_drift_alarm_line2": 1.0,
+  "cnn_drift_false_alarm_line1": 0.0,
+  "cnn_adapted_accuracy": 0.956,
+  "cnn_adapted_escape": 0.0017793594306049821,
+  "cnn_adapted_false_reject": 0.7753824756606398,
+  "cnn_adapted_line1_accuracy": 0.9826666666666667,
+  "cnn_adapted_gain": 0.02749999999999997,
+  "cnn_line2_crack_recall": {
+    "base": 0.783625730994152,
+    "adapted": 0.7192982456140351
+  },
+  "cnn_section_s": 438.1
+}
