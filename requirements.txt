@@ -1,0 +1,13 @@
+# CPU-only PyTorch (≈ 200 MB instead of the multi-GB CUDA build)
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch>=2.4
+numpy>=1.26
+pandas>=2.1
+scipy>=1.11
+scikit-learn>=1.4
+pydantic>=2.6
+fastapi>=0.110
+uvicorn[standard]>=0.29
+prometheus-client>=0.20
+streamlit>=1.40
+altair>=5

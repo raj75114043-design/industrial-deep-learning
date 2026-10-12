@@ -1,0 +1,18 @@
+# API + console (+ optional Prometheus)
+services:
+  api:
+    build: .
+    env_file: .env
+    ports: ["8000:8000"]
+
+  console:
+    build: .
+    env_file: .env
+    command: ["streamlit", "run", "streamlit_app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+    ports: ["8501:8501"]
+
+  prometheus:
+    image: prom/prometheus:v2.53.0
+    profiles: ["observability"]
+    volumes: ["./deploy/prometheus.yml:/etc/prometheus/prometheus.yml:ro"]
+    ports: ["9090:9090"]

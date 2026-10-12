@@ -1,0 +1,20 @@
+# GitLab CI mirror of the GitHub Actions quality pipeline
+stages: [quality]
+
+default:
+  image: python:3.11-slim
+  cache: {key: pip, paths: [.cache/pip]}
+  before_script:
+    - pip install -r requirements-dev.txt
+
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+quality:
+  stage: quality
+  timeout: 45m
+  script:
+    - ruff check .
+    - pytest -q
+    - python -m indl.eval.run --gate --out reports/eval-ci.json
+  artifacts: {paths: [reports/eval-ci.json], expire_in: 30 days, when: always}
